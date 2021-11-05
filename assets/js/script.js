@@ -68,5 +68,4 @@ $(function () {
         e.preventDefault();
         $('.dropdown-menu.dropdown-menu-right.navbar-dropdown').toggleClass('show');
     });
-    $('.slimscroll').slimScroll();
 });
