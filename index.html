@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-TW" id="loadingHtml" style="display:none;background:#fff;background-color:#fff">
+<!-- Mirrored from pigepm.coa.gov.tw/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Nov 2021 01:30:59 GMT -->
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no" />
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="EXPIRES" content="0">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta name="theme-color" content="#000000" />
+    <meta name="keywords" content="豬場一把抓,豬場e把抓,養豬,智慧養豬,養豬自動化,農委會豬場" />
+    <link rel="manifest" href="manifest.html" />
+    <link href="css/style.css" rel="stylesheet">
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/xlsx.full.min.js"></script>
+    <script src="assets/js/Blob.js"></script>
+    <script src="assets/js/FileSaver.js"></script>
+    <script src="assets/js/shim.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65622624-10"></script>
+    <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-65622624-10")</script>
+    <title>豬場e把抓</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            max-width: 100%
+        }
+
+        input[type=date]::-webkit-inner-spin-button {
+            visibility: hidden
+        }
+
+        .react-datepicker__input-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            min-width: 150px
+        }
+
+        .react-datepicker-wrapper {
+            width: 100%;
+            min-width: 150px
+        }
+
+        .react-datepicker__month-read-view--selected-month {
+            font-size: 1rem
+        }
+
+        .react-datepicker__year-read-view--selected-year {
+            font-size: 1rem
+        }
+
+        .react-datepicker__year-option {
+            font-size: 1rem
+        }
+
+        .react-datepicker__month-option {
+            font-size: 1rem
+        }
+
+        .react-datepicker__current-month.react-datepicker__current-month--hasYearDropdown.react-datepicker__current-month--hasMonthDropdown {
+            font-size: 1rem
+        }
+
+        @media screen and (max-width:600px) {
+            .page404 {
+                padding: 5vh
+            }
+
+            .page404-title {
+                text-align: center
+            }
+        }
+
+        .react-datepicker-popper {
+            z-index: 1111 !important
+        }
+    </style>
+    <link href="static/css/2.6924ed2e.chunk.css" rel="stylesheet">
+    <link href="static/css/main.96b207b3.chunk.css" rel="stylesheet">
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light home-navbar" id="navbar">
+                <div class="container">
+                    <a href="#" class="navbar-brand"><img src="/images/logo-pigepm.png" alt="豬場e把抓" class="mr-2" /><span class="brand-text">豬場e把抓</span></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="navbarNavDropdown" class="navbar-collapse collapse">
+                        <ul class="navbar-nav mr-auto mb-0 mt-0 py-0"></ul>
+                        <ul class="navbar-nav home-navbar-nav">
+                            <li class="nav-item"><a class="nav-link">最新消息</a></li>
+                            <li class="nav-item"><a class="nav-link">主要服務</a></li>
+                            <li class="nav-item"><a class="nav-link">下載app</a></li>
+                            <li class="nav-item"><a class="nav-link">常見問題</a></li>
+                            <li class="nav-item"><a class="nav-link">聯絡我們</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/login"><i class="fas fa-user mr-2"></i>登入|註冊</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="banner">
+                <div class="container banner-box">
+                    <div class="banner-left">
+                        <h2>
+                            細心關注每頭豬仔出生到販售<br />
+                            簡單管理 , 即時掌握
+                        </h2>
+                        <div class="app-box">
+                            <a class="app_android" target="_blank" href="https://play.google.com/store/apps/details?id=com.lingcheng.pigfarming"></a>
+                            <a target="_blank" href="https://itunes.apple.com/tw/app/豬場e把抓/id1414128496?mt=8" class="app_ios"></a>
+                        </div>
+                    </div>
+                    <div class="banner_phone"></div>
+                </div>
+            </div>
+            <div class="container" id="service">
+                <div class="news_box">
+                    <div class="row mx-0 px-0 my-4">
+                        <div class="col-md-12 mb-1"><h2>最新消息</h2></div>
+                        <div class="col-12 col-md-6">
+                            <div class="py-2">
+                                <div href="javascript:void(0)" class="list-item" style="cursor: pointer; list-style: none;"><span class="text-muted pr-3">2021-11-02</span>[系統公告] 豬場e把抓將於2021/11/02(二) 15:00~18:00進行系統維護</div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <div class="py-2">
+                                <div href="javascript:void(0)" class="list-item" style="cursor: pointer; list-style: none;"><span class="text-muted pr-3">2021-10-21</span>[系統公告] 豬場e把抓將於2021/10/21(四) 19:00~23:00進行系統維護</div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="text-center"><button type="button" class="btn btn-outline-secondary mt-3">查看更多消息</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-container pt-4">
+                <div class="row mx-0">
+                    <div class="col-md-12">
+                        <div class="service-mac">
+                            <h3>豬場e把抓 主要服務</h3>
+                            <img src="../images/service_mac.png" alt="mac" />
+                        </div>
+                    </div>
+                    <div class="col-md-3 text-center bg-white py-5">
+                        <h3>自動排程工作提醒</h3>
+                        <div class="text-muted">建立豬隻基本資料，即自動產生各階段豬隻需處理工作</div>
+                    </div>
+                    <div class="col-md-3 text-center bg-white py-5">
+                        <h3>豬隻防疫計畫</h3>
+                        <div class="text-muted">預設專家提醒各豬種達日齡所需施打政府規定之疫苗</div>
+                    </div>
+                    <div class="col-md-3 text-center bg-white py-5">
+                        <h3>豬隻異常淘汰提醒</h3>
+                        <div class="text-muted text-center">提醒豬隻異常狀況與繁殖率不佳豬隻達淘汰標準</div>
+                    </div>
+                    <div class="col-md-3 text-center bg-white py-5">
+                        <h3>掌控豬場成本開銷</h3>
+                        <div class="text-muted">隨時掌控目前可販售豬隻與售出肉豬、飼料用量紀錄</div>
+                    </div>
+                </div>
+            </div>
+            <div class="download_box">
+                <h2>下載豬場e把抓 可以讓您</h2>
+                <div class="download-item">
+                    <img src="../images/download_icn01.png" alt="download" />
+                    <h3>隨時掌握豬場狀況</h3>
+                    <div class="hr_line"></div>
+                    <p>行動App管控豬隻，即時回填紙本紀錄 數據隨身好方便</p>
+                </div>
+                <div class="download-item">
+                    <img src="../images/download_icn02.png" alt="download" />
+                    <h3>追溯紀錄問題</h3>
+                    <div class="hr_line"></div>
+                    <p>時間軸工作歷程，圖像化管理追溯豬隻問題好快速</p>
+                </div>
+                <div class="download-item">
+                    <img src="../images/download_icn03.png" alt="download" />
+                    <h3>擁有專家協助</h3>
+                    <div class="hr_line"></div>
+                    <p>協助分析解決豬場大小事提升豬隻育成率好簡單</p>
+                </div>
+                <div id="contact"></div>
+            </div>
+            <div class="container text-center home-data-container mt-3" ratio="0.3">
+                <h2>加入我們</h2>
+                <p>使用<font>豬場e把抓</font>管理豬場大小事，快來加入智慧養豬行列吧!</p>
+                <div class="row mx-0 px-0">
+                    <div class="col-6">
+                        <div class="number-name-count">587</div>
+                        <div class="number-name-item">牧場數量</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="number-name-count">621</div>
+                        <div class="number-name-item">使用者數量</div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact_box">
+                <div class="container">
+                    <h2>在養豬的路上遇到問題了嗎？</h2>
+                    <p>輔導欲改善豬場現有管理方式，提升母豬育成率降低繁殖損失； 了解豬隻遺傳育種、營養與飼料供應、繁殖生理(含人工授精)等問題。</p>
+                    <div class="txt-c">
+                        <div class="btn btn-dark btn-lg"><span>聯絡我們</span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="qrcode_box">
+                <div id="download"></div>
+                <div class="container mx-0 px-0">
+                    <h2 class="download_title">立即下載豬場e把抓</h2>
+                    <div class="row mx-0">
+                        <div class="col-md-6">
+                            <div class="phone_img"><img src="../images/footer_phone.png" alt="豬場e把抓" /></div>
+                        </div>
+                        <div class="col-md-6">
+                            <h2>立即下載豬場e把抓</h2>
+                            <div class="qr-img"><img src="../images/qrcode.png" width="120" height="120" /></div>
+                            <div class="app-sotre">
+                                <a href="https://itunes.apple.com/tw/app/豬場e把抓/id1414128496?mt=8" target="_blank"><img src="../images/app_ios.png" /></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.lingcheng.pigfarming" target="_blank"><img src="../images/app_android.png" /></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="container">
+                    <p>服務時間：平日週一~週五 8:30 ~12:00, 13:30~17:30</p>
+                    <p>Email：agrservice@mail.linkchain.tw 系統維運：07-9703898#3#2</p>
+                    <p>Copyright©2020行政院農業委員會. All rights reserved. | <a class="text-info" href="/Privacy">個人資料保護暨隱私權聲明</a> | <a class="text-info" href="/authorize">服務授權使用協議</a></p>
+                    <p>瀏覽解析度 360 X 640 ~ 1280 X 768 以上 ，支援 Firefox、Google Chrome</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script>window.addEventListener("load", (function (n) { document.getElementById("loadingHtml").style.background = "", document.getElementById("loadingHtml").style["background-color"] = ""; try { window.location.pathname.includes("backend") ? document.getElementById("loadingHtml").style.display = "" : $("#loadingHtml").fadeIn("slow") } catch (n) { $("#loadingHtml").fadeIn("slow") } }))</script>
+    <script>if ("Microsoft Internet Explorer" == navigator.appName || navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/) || void 0 !== $.browser && 1 == $.browser.msie) console.log("目前使用的是IE，不支援signalr"); else { var jq = document.createElement("script"); jq.type = "text/javascript", jq.src = "assets/js/signalr.js", document.getElementsByTagName("head")[0].appendChild(jq) }</script>
+    <script>!function (e) { function r(r) { for (var n, p, l = r[0], a = r[1], f = r[2], c = 0, s = []; c < l.length; c++)p = l[c], Object.prototype.hasOwnProperty.call(o, p) && o[p] && s.push(o[p][0]), o[p] = 0; for (n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]); for (i && i(r); s.length;)s.shift()(); return u.push.apply(u, f || []), t() } function t() { for (var e, r = 0; r < u.length; r++) { for (var t = u[r], n = !0, l = 1; l < t.length; l++) { var a = t[l]; 0 !== o[a] && (n = !1) } n && (u.splice(r--, 1), e = p(p.s = t[0])) } return e } var n = {}, o = { 1: 0 }, u = []; function p(r) { if (n[r]) return n[r].exports; var t = n[r] = { i: r, l: !1, exports: {} }; return e[r].call(t.exports, t, t.exports, p), t.l = !0, t.exports } p.m = e, p.c = n, p.d = function (e, r, t) { p.o(e, r) || Object.defineProperty(e, r, { enumerable: !0, get: t }) }, p.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, p.t = function (e, r) { if (1 & r && (e = p(e)), 8 & r) return e; if (4 & r && "object" == typeof e && e && e.__esModule) return e; var t = Object.create(null); if (p.r(t), Object.defineProperty(t, "default", { enumerable: !0, value: e }), 2 & r && "string" != typeof e) for (var n in e) p.d(t, n, function (r) { return e[r] }.bind(null, n)); return t }, p.n = function (e) { var r = e && e.__esModule ? function () { return e.default } : function () { return e }; return p.d(r, "a", r), r }, p.o = function (e, r) { return Object.prototype.hasOwnProperty.call(e, r) }, p.p = "index.html"; var l = this["webpackJsonpweb-app"] = this["webpackJsonpweb-app"] || [], a = l.push.bind(l); l.push = r, l = l.slice(); for (var f = 0; f < l.length; f++)r(l[f]); var i = a; t() }([])</script>
+    <script src="static/js/2.6c1b5741.chunk.js"></script>
+    <script src="static/js/main.232790fa.chunk.js"></script>
+</body>
+<!-- Mirrored from pigepm.coa.gov.tw/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 05 Nov 2021 01:30:59 GMT -->
+</html>

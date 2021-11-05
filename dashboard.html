@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="en" style="background:#fff;background-color:#fff">
+<head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="./images/favicon.png" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no" />
+    <meta http-equiv="PRAGMA" content="NO-CACHE">
+    <meta http-equiv="EXPIRES" content="0">
+    <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+    <meta name="theme-color" content="#000000" />
+    <meta name="keywords" content="豬場一把抓,豬場e把抓,養豬,智慧養豬,養豬自動化,農委會豬場" />
+    <link href="css/style.css" rel="stylesheet" />
+ 
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65622624-10"></script>
+    <title>豬場e把抓</title>
+    <style>
+        body {
+            overflow-x: hidden;
+            max-width: 100%
+        }
+
+        input[type=date]::-webkit-inner-spin-button {
+            visibility: hidden
+        }
+
+        .react-datepicker__input-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            min-width: 150px
+        }
+
+        .react-datepicker-wrapper {
+            width: 100%;
+            min-width: 150px
+        }
+
+        .react-datepicker__month-read-view--selected-month {
+            font-size: 1rem
+        }
+
+        .react-datepicker__year-read-view--selected-year {
+            font-size: 1rem
+        }
+
+        .react-datepicker__year-option {
+            font-size: 1rem
+        }
+
+        .react-datepicker__month-option {
+            font-size: 1rem
+        }
+
+        .react-datepicker__current-month.react-datepicker__current-month--hasYearDropdown.react-datepicker__current-month--hasMonthDropdown {
+            font-size: 1rem
+        }
+
+        @media screen and (max-width:600px) {
+            .page404 {
+                padding: 5vh
+            }
+
+            .page404-title {
+                text-align: center
+            }
+        }
+
+        .react-datepicker-popper {
+            z-index: 1111 !important
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="backend-container">
+        <div class="wrap sidebar-mini"></div>
+        <div class="menu-collapse"></div>
+        <header class="navbar navbar-dark sticky-top flex-md-nowrap p-0 bg-main header">
+            <div class="navbar-brand mr-0 logo">
+                <span class="logo-lg" style="cursor: pointer;"> <a class="nav-bar-link" href="/backend/dashboard">豬場e把抓 </a></span><span class="logo-mini">豬</span>
+            </div>
+            <ul class="nav top-links">
+                <div class="sidebar-toggle">
+                    <div><i class="fas fa-bars"></i></div>
+                </div>
+                <div class="dropdown ml-auto">
+                    <div class="sidebar-toggle">
+                        <div><i class="fas fa-user-tie"></i><span>黃群弼 | 詹姆仕現代牧場</span></div>
+                    </div>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown" style="z-index: 1020;">
+                        <span class="dropdown-item btn">個人帳號</span>
+                        <a target="_blank" href="https://pigepm.coa.gov.tw/files/%E4%BD%BF%E7%94%A8%E8%80%85%E6%89%8B%E5%86%8A-%E8%B1%AC%E5%A0%B4e%E6%8A%8A%E6%8A%93(2020).pdf" class="dropdown-item btn">使用手冊</a>
+                        <div class="d-inline"><span class="dropdown-item btn">切換豬場</span></div>
+                        <span class="dropdown-item btn d-none">切換輔導豬場</span><span class="dropdown-item btn">豬場e把抓資料匯入/匯出</span><span class="dropdown-item btn">PigCHAMP資料匯入/匯出</span>
+                        <a class="dropdown-item btn" href="/login.html">登出</a>
+                    </div>
+                </div>
+            </ul>
+        </header>
+        <main>
+            <aside class="sidebar slimScroll">
+                <ul class="sidemenu side-mini">
+                    <li>
+                        <a class=""><i class="fas fa-tachometer-alt"></i><span>總覽</span></a>
+                    </li>
+                    <li>
+                        <a class="toggle">
+                            <i class="fas fa-piggy-bank"></i><span>飼養管理</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>母豬飼養管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>公豬飼養管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>仔肉豬飼養管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>選留名單管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>精液管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>飼料總用量管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>豬隻販售管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>批次更改耳號</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle">
+                            <i class="fas fa-tasks"></i><span>工作清單</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class="toggle">
+                                    <i class="fas fa-caret-right"></i><span>飼養工作紀錄</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>豬隻販售</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>公豬採精</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>發情觀察</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>配種</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>測孕</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>分娩轉舍</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>分娩</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>閹豬</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>部分離乳</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>完全離乳</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>仔肉豬轉舍</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="toggle">
+                                    <i class="fas fa-caret-right"></i><span>例外事件紀錄</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>寄養</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>仔豬死亡</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>空胎</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>流產</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>豬隻死亡</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>日常工作紀錄</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>飼料總用量紀錄</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle">
+                            <i class="fas fa-bell"></i><span>提醒事項</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>異常提醒</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>淘汰提醒</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>疾病用藥提醒</span></a>
+                            </li>
+                            <li>
+                                <a class="toggle">
+                                    <i class="fas fa-caret-right"></i><span>防疫計畫</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>母豬</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>公豬</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>仔肉豬</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>更新種豬</span></a>
+                                    </li>
+                                    <li>
+                                        <a class=""><i class="fas fa-caret-right"></i><span>一刀切防疫計畫</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle">
+                            <i class="fas fa-cog"></i><span>基本資料管理</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>豬場管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>品種管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>豬隻管理標準設定</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>防疫計畫設定</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>豬舍管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>飼料設定管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>醫療藥材管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>人員管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>供應商管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>其他資材管理</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle">
+                            <i class="fas fa-briefcase"></i><span>經營管理</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>進退貨管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>庫存管理</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle">
+                            <i class="fas fa-chart-pie"></i><span>統計分析報表</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>豬場生產統計分析報告</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>種豬繁衍情形報告</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>仔豬死亡統計報告</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>空胎母豬報告</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>新女豬狀態分析</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>非活躍豬隻列表</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>種母豬紀錄卡</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>分娩控制匯總表</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>母豬非生產天數報告</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>母豬流產彙總表</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>疫苗使用統計報表</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>飼料使用統計報表</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>豬隻死亡統計報表</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>祖譜</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="toggle">
+                            <i class="fas fa-satellite-dish"></i><span>AIoT應用管理</span><span class="sidemenu-arrow pull-right"><i class="fas fa-angle-left"></i></span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>感測器管理</span></a>
+                            </li>
+                            <li>
+                                <a class=""><i class="fas fa-caret-right"></i><span>環境感測數據</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="treeview-menu">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+            <div class="lockpage">
+                <div class="content-wrap">
+                    <div class="content-head flex-wrap">
+                        <div class="justify-content-between">
+                            <h2 class="content-title">總覽</h2>
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/backend/dashboard">首頁</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">總覽</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="page dashboard">
+                        <div class="mb-3">
+                            <div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="widget">
+                                            <div class="row">
+                                                <div class="col-12 col-xl-3 pr-0">
+                                                    <div class="widget-head">
+                                                        <h4 class="widget-title mr-auto"><i class="fas fa-chart-line mr-2"></i>豬隻行情</h4>
+                                                        <small class="text-muted">*價格皆與昨日交易相比</small>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="">縣市</label>
+                                                        <div class="basic-single css-2b097c-container">
+                                                            <div class="select__control css-yk16xz-control">
+                                                                <div class="select__value-container select__value-container--is-multi select__value-container--has-value css-1hwfws3">
+                                                                    <div class="css-1rhbuit-multiValue select__multi-value">
+                                                                        <div class="css-12jo7m5 select__multi-value__label">台中市</div>
+                                                                        <div class="css-xb97g8 select__multi-value__remove">
+                                                                            <svg height="14" width="14" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r">
+                                                                                <path d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"></path>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="css-1rhbuit-multiValue select__multi-value">
+                                                                        <div class="css-12jo7m5 select__multi-value__label">台中大安</div>
+                                                                        <div class="css-xb97g8 select__multi-value__remove">
+                                                                            <svg height="14" width="14" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r">
+                                                                                <path d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"></path>
+                                                                            </svg>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="css-1g6gooi">
+                                                                        <div class="select__input" style="display: inline-block;">
+                                                                            <input autocapitalize="none"
+                                                                                   autocomplete="off"
+                                                                                   autocorrect="off"
+                                                                                   id="react-select-2-input"
+                                                                                   spellcheck="false"
+                                                                                   tabindex="0"
+                                                                                   type="text"
+                                                                                   aria-autocomplete="list"
+                                                                                   value=""
+                                                                                   style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;" />
+                                                                            <div style="
+                                                                                    position: absolute;
+                                                                                    top: 0px;
+                                                                                    left: 0px;
+                                                                                    visibility: hidden;
+                                                                                    height: 0px;
+                                                                                    overflow: scroll;
+                                                                                    white-space: pre;
+                                                                                    font-size: 16px;
+                                                                                    font-family: 'Noto Sans TC', 'Microsoft JhengHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif,
+                                                                                        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+                                                                                    font-weight: 400;
+                                                                                    font-style: normal;
+                                                                                    letter-spacing: normal;
+                                                                                    text-transform: none;
+                                                                                "></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="select__indicators css-1wy0on6">
+                                                                    <div aria-hidden="true" class="select__indicator select__clear-indicator css-tlfecz-indicatorContainer">
+                                                                        <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r">
+                                                                            <path d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                    <span class="select__indicator-separator css-1okebmr-indicatorSeparator"></span>
+                                                                    <div aria-hidden="true" class="select__indicator select__dropdown-indicator css-tlfecz-indicatorContainer">
+                                                                        <svg height="20" width="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r">
+                                                                            <path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-right mb-2 mb-xl-0">
+                                                        <button type="button" class="btn btn-primary btn-sm"><i class="fas fa-search mr-1"></i>查詢</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-xl-9 p-0">
+                                                    <div class="fixed-th-table">
+                                                        <div class="p-0">
+                                                            <table id="marketPlacesList" class="table mb-0 table-striped" style="max-height: 200px; display: block;">
+                                                                <thead class="text-center">
+                                                                    <tr>
+                                                                        <th style="width: 15%;">交易市場</th>
+                                                                        <th class="text-nowrap undefined" style="width: 25%; cursor: pointer;">
+                                                                            規格豬總平均價格<small>(75kg以上)</small><i class="pl-2 fa fa-sort" style="opacity: 0.5;"></i>
+                                                                            <span style="cursor: pointer;"><span></span><i class="pl-2" style="opacity: 0.5;"></i></span>
+                                                                        </th>
+                                                                        <th class="text-nowrap undefined" style="width: 25%; cursor: pointer;">
+                                                                            總平均價格<i class="pl-2 fa fa-sort" style="opacity: 0.5;"></i><span style="cursor: pointer;"><span></span><i class="pl-2" style="opacity: 0.5;"></i></span>
+                                                                        </th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody class="text-center">
+                                                                    <tr>
+                                                                        <td class="text-center text-nowrap">台中市</td>
+                                                                        <td>
+                                                                            0.00<span class="pl-3"><i class="fas fa-minus pr-1"></i>0.00%</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            0.00<span class="pl-3"><i class="fas fa-minus pr-1"></i>0.00%</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="text-center text-nowrap">台中大安</td>
+                                                                        <td>
+                                                                            75.21<span class="pl-3 text-success"><i class="fas fa-arrow-circle-down pr-1"></i>-1.10%</span>
+                                                                        </td>
+                                                                        <td>
+                                                                            74.58<span class="pl-3 text-success"><i class="fas fa-arrow-circle-down pr-1"></i>-1.23%</span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <section class="farmDashboardGetPigWork-section">
+                                    <div>
+                                        <h3 class="widget-title"><i class="fas fa-clipboard-list"></i> 飼養工作紀錄 - 日期區間</h3>
+                                    </div>
+                                    <div class="col-12 col-md-4 widget-title pl-2">
+                                        <div style="margin-top: -0.2rem;">
+                                            <div class="input-group input-group-sm">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-secondary" title="前一周"><i class="fas fa-caret-left"></i></button>
+                                                </div>
+                                                <input type="text" class="form-control text-center font-weight-bold" placeholder="以週為切換單位(日~六)" title="2021-10-31~2021-11-6" readonly="" value="2021-10-31~2021-11-6" />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" title="下一周"><i class="fas fa-caret-right"></i></button>
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" title="下一周"><i class="fas fa-calendar-alt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/estrus?estrusTable=%7B%22weekStartDate%22:%222021-10-31T00:00:00%22,%22weekEndDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-blue" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-eye"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">發情觀察</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/mating?matingTable=%7B%22weekStartDate%22:%222021-10-31T00:00:00%22,%22weekEndDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-green" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-venus-mars"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">配種</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/pregnancyCheck?pregnancyCheckTable=%7B%22weekStartDate%22:%222021-10-31T00:00:00%22,%22weekEndDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-peach" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-eye-dropper"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">測孕</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/parturitionTransfer?parturitionTransferTable=%7B%22weekStartDate%22:%222021-10-31T00:00:00%22,%22weekEndDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-orange" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-hospital-alt"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">分娩轉舍</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/parturition?parturitionTransferTable=%7B%22weekStartDate%22:%222021-10-31T00:00:00%22,%22weekEndDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-slateblue" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-truck-loading"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">分娩</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/partWeaning?partWeaningTable=%7B%22weekStartDate%22:%222021-10-31T00:00:00%22,%22weekEndDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-brown" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-reply"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">部分離乳</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/weaning?weaningTable=%7B%22weekStartDate%22:%222021-10-31T00:00:00%22,%22weekEndDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-darkgreen" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-reply-all"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">完全離乳</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/semen?semenTable=%7B%22weekStartDate%22:%222021-10-31T00:00:00%22,%22weekEndDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-grassgreen" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-vial"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">精液採集</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/hogTransfer?hogTransferTable=%7B%22weekStartDate%22:%222021-10-31T00:00:00%22,%22weekEndDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-ochre" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-warehouse"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">肉豬轉舍</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/sell">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-main" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-piggy-bank"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">販售處理</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/raise/sow?sowTable=%7B%22sowStatus%22:%5B%221%22,%222%22,%226%22%5D%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-pink" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-tint-slash"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">未配種</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/raise/breedingObservation">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-cyan" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-glasses"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">配種觀察</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row mt-1">
+                            <div class="col-12">
+                                <section class="farmPigWorkSearhWorkCount-section">
+                                    <div>
+                                        <h3 class="widget-title"><i class="fas fa-clipboard-list"></i> 例外與其他工作紀錄 - 日期區間</h3>
+                                    </div>
+                                    <div class="col-md-4 col-12 widget-title pl-2">
+                                        <div style="margin-top: -0.2rem;">
+                                            <div class="input-group input-group-sm">
+                                                <div class="input-group-prepend">
+                                                    <button class="btn btn-outline-secondary" title="前一周"><i class="fas fa-caret-left"></i></button>
+                                                </div>
+                                                <input type="text" class="form-control text-center font-weight-bold" placeholder="以週為切換單位(日~六)" title="2021-10-31~2021-11-6" readonly="" value="2021-10-31~2021-11-6" />
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" title="下一周"><i class="fas fa-caret-right"></i></button>
+                                                </div>
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary" title="下一周"><i class="fas fa-calendar-alt"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/feed">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-primary" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-utensils"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">飼料紀錄</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/exception/fostering?semenTable=%7B%22startDate%22:%222021-10-31T00:00:00%22,%22endDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-pink" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-baby-carriage"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">寄養</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/exception/hogDead?semenTable=%7B%22startDate%22:%222021-10-31T00:00:00%22,%22endDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-secondary" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-skull"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">仔豬死亡</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/exception/emptyPig?semenTable=%7B%22startDate%22:%222021-10-31T00:00:00%22,%22endDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-success" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 far fa-hourglass"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">空胎</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/exception/abortion?semenTable=%7B%22startDate%22:%222021-10-31T00:00:00%22,%22endDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-dark" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-heart-broken"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">流產</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2 mb-3 rounded">
+                                <a href="/backend/work/exception/pigDead?semenTable=%7B%22startDate%22:%222021-10-31T00:00:00%22,%22endDate%22:%222021-11-06T23:59:59%22%7D">
+                                    <div class="info-box-container">
+                                        <div class="flex">
+                                            <div class="text-center bg-danger" style="color: white; width: 4rem; border-radius: 4px 0px 0px 4px;"><i class="mt-4 fas fa-skull-crossbones"></i></div>
+                                            <div class="pl-2 my-2 data">
+                                                <div class="title">豬隻死亡</div>
+                                                <div class="number">0</div>
+                                            </div>
+                                        </div>
+                                        <div class="go-overlay">查看</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row dash-row">
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <div class="widget-head">
+                                        <h4 class="widget-title"><i class="far fa-bell"></i> 提醒事項</h4>
+                                    </div>
+                                    <div class="widget-body midheight">
+                                        <div class="lists">
+                                            <a class="list-item" href="/backend/notification/abnormal">
+                                                <span class="list-icon peach"><i class="fas fa-exclamation-triangle"></i></span>異常提醒<span class="li-badge ml-auto">0</span>
+                                            </a>
+                                            <a class="list-item" href="/backend/notification/breedingPigEliminate">
+                                                <span class="list-icon peach"><i class="fas fa-times-circle"></i></span>種豬淘汰<span class="li-badge ml-auto">0</span>
+                                            </a>
+                                            <a class="list-item" href="/backend/notification/diseaseMedication">
+                                                <span class="list-icon orange"><i class="fas fa-prescription-bottle-alt"></i></span>疾病觀察用藥<span class="li-badge ml-auto">0</span>
+                                            </a>
+                                            <a class="list-item" href="/backend/notification/epidemicPreventionPlan/sow">
+                                                <span class="list-icon slateblue"><i class="fas fa-syringe"></i></span>防疫計畫 - 母豬<span class="li-badge ml-auto">0</span>
+                                            </a>
+                                            <a class="list-item" href="/backend/notification/epidemicPreventionPlan/hog">
+                                                <span class="list-icon slateblue"><i class="fas fa-syringe"></i></span>防疫計畫 - 仔肉豬<span class="li-badge ml-auto">0</span>
+                                            </a>
+                                            <a class="list-item" href="/backend/notification/epidemicPreventionPlan/bleeding">
+                                                <span class="list-icon slateblue"><i class="fas fa-syringe"></i></span>防疫計畫 - 更新種豬<span class="li-badge ml-auto">0</span>
+                                            </a>
+                                            <a class="list-item" href="/backend/notification/epidemicPreventionPlan/boar">
+                                                <span class="list-icon slateblue"><i class="fas fa-syringe"></i></span>防疫計畫 - 公豬<span class="li-badge ml-auto">0</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <div class="widget-head">
+                                        <h4 class="widget-title"><i class="fas fa-tags"></i> 豬隻現況統計</h4>
+                                    </div>
+                                    <div class="widget-body midheight">
+                                        <div class="pigcounting">
+                                            <div class="progress-group">
+                                                <div class="pro-title"><span class="progress-name">新女豬</span><span class="quan ml-auto">0/0頭</span></div>
+                                                <div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-orange" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div>
+                                            </div>
+                                            <div class="progress-group">
+                                                <div class="pro-title"><span class="progress-name">母豬</span><span class="quan ml-auto">0/0頭</span></div>
+                                                <div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-turquoise" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div>
+                                            </div>
+                                            <div class="progress-group">
+                                                <div class="pro-title"><span class="progress-name">公豬</span><span class="quan ml-auto">0/0頭</span></div>
+                                                <div class="progress">
+                                                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-grassgreen" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+                                            <div class="progress-group">
+                                                <div class="pro-title"><span class="progress-name">保育豬</span><span class="quan ml-auto">0/0頭</span></div>
+                                                <div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-pink" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div>
+                                            </div>
+                                            <div class="progress-group">
+                                                <div class="pro-title"><span class="progress-name">生長豬</span><span class="quan ml-auto">0/0頭</span></div>
+                                                <div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-ochre" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div>
+                                            </div>
+                                            <div class="progress-group">
+                                                <div class="pro-title"><span class="progress-name">肥育豬</span><span class="quan ml-auto">0/0頭</span></div>
+                                                <div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-purple" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div>
+                                            </div>
+                                            <div class="progress-group">
+                                                <div class="pro-title"><span class="progress-name">外購仔肉豬(無出生日期)</span><span class="quan ml-auto">0/0頭</span></div>
+                                                <div class="progress"><div class="progress-bar progress-bar-striped progress-bar-animated bg-peach" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div>
+                                            </div>
+                                        </div>
+                                        <h5 class="text-right mt-2"><small class="text-muted">總頭數：</small>0</h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <div class="widget-head">
+                                        <h4 class="widget-title"><i class="fas fa-bullhorn"></i> 最新訊息</h4>
+                                    </div>
+                                    <div class="widget-body midheight">
+                                        沒有訊息
+                                        <div class="lists"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <div class="widget-head">
+                                        <h4 class="widget-title"><i class="fas fa-book-dead"></i>2021年累積損失</h4>
+                                    </div>
+                                    <div class="widget-body midheight">
+                                        <ul class="mini-lists">
+                                            <li class="m-list-item"><span>豬隻死亡</span><span class="counts ml-auto text-danger">0</span></li>
+                                            <li class="m-list-item"><span>仔豬死亡</span><span class="counts ml-auto text-danger">0</span></li>
+                                            <li class="m-list-item"><span>流產</span><span class="counts ml-auto text-danger">0</span></li>
+                                            <li class="m-list-item"><span>空胎</span><span class="counts ml-auto text-danger">0</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row dash-row">
+                            <div class="col-xl-8">
+                                <div class="widget">
+                                    <div class="widget-head">
+                                        <h4 class="widget-title"><i class="fas fa-heartbeat"></i> 飼養狀況</h4>
+                                    </div>
+                                    <div class="widget-body">
+                                        <div class="row">
+                                            <div class="col-6 col-xl-3 chart-circle">
+                                                <div class="c100 p0">
+                                                    <span>0%</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="circle-title w-100">配種率</div>
+                                            </div>
+                                            <div class="col-6 col-xl-3 chart-circle">
+                                                <div class="c100 orange p0">
+                                                    <span>0%</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="circle-title w-100">分娩率</div>
+                                            </div>
+                                            <div class="col-6 col-xl-3 chart-circle">
+                                                <div class="c100 peach p0">
+                                                    <span>0%</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="circle-title w-100">仔豬死亡率</div>
+                                            </div>
+                                            <div class="col-6 col-xl-3 chart-circle">
+                                                <div class="c100 green p0">
+                                                    <span>0%</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="circle-title w-100">仔肉豬育成率</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4">
+                                <div class="widget">
+                                    <div class="widget-head">
+                                        <h4 class="widget-title"><i class="fas fa-bullseye"></i> 繁殖目標</h4>
+                                    </div>
+                                    <div class="widget-body smheight">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h6>預計產出量</h6>
+                                                <p><strong class="text-purple">0</strong> 頭</p>
+                                                <h6>目前產出量</h6>
+                                                <p><strong class="text-purple">0</strong> 頭</p>
+                                            </div>
+                                            <div class="col chart-circle">
+                                                <div class="c100 purple p0">
+                                                    <span>0%</span>
+                                                    <div class="slice">
+                                                        <div class="bar"></div>
+                                                        <div class="fill"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="circle-title w-100">達成率</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="overlay">
+                    <div class="position-relative text-center">
+                        <div class="position-fixed loading-msg">
+                            <div class="d-flex justify-content-center align-self-center">
+                                <div>
+                                    <div class="pt-1" style="fill: red; height: 30px; width: 30px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                            <path opacity=".25" d="M16 0 A16 16 0 0 0 16 32 A16 16 0 0 0 16 0 M16 4 A12 12 0 0 1 16 28 A12 12 0 0 1 16 4"></path>
+                                            <path d="M16 0 A16 16 0 0 1 32 16 L28 16 A12 12 0 0 0 16 4z">
+                                                <animateTransform attributeName="transform" type="rotate" from="0 16 16" to="360 16 16" dur="0.8s" repeatCount="indefinite"></animateTransform>
+                                            </path>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="text ml-2">處理中...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/xlsx.full.min.js"></script>
+    <script src="assets/js/Blob.js"></script>
+    <script src="assets/js/FileSaver.js"></script>
+    <script src="assets/js/shim.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
